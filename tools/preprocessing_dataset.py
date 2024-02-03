@@ -6,19 +6,19 @@ from pathlib import Path
 import librosa
 from tqdm import tqdm
 
+sys.path.append(os.getcwd())
 from audio_zen.acoustics.feature import activity_detector, is_clipped, load_wav
 
 sys.path.append(os.path.join(os.getcwd(), "recipes"))
 
 # Candidates for dataset directories
 candidate_datasets = [
-    "~/Datasets/DNS-Challenge-ICASSP/datasets/clean/german_speech/CC_BY_SA_4.0_249hrs_339spk_German_Wikipedia_16k",
-    "~/Datasets/DNS-Challenge-ICASSP/datasets/clean/german_speech/M-AILABS_Speech_Dataset",
+    "~/Datasets/DNS-Challenge-2020/datasets/clean",
 ]
 dataset_limit = None
 dataset_offset = 0
 dist_file = (
-    Path("~/Datasets/DNS-Challenge-ICASSP/datasets/german_3s_0.6_30hrs.txt")
+    Path("~/Datasets/DNS-Challenge-2020/datasets/german_3s_0.6_30hrs.txt")
     .expanduser()
     .absolute()
 )
